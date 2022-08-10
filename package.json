@@ -1,0 +1,43 @@
+{
+  "name": "pipewrench_mod_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "del-cli --force ./media/lua ./dst",
+    "build-scripts": "tsc scripts/compile.ts",
+    "compile": "node scripts/compile.js",
+    "export": "node scripts/compile.js --declarations",
+    "dev": "node scripts/compile.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asledgehammer/ZomboidTypeScriptModTemplate.git"
+  },
+  "keywords": [
+    "zomboid_lua_test"
+  ],
+  "author": "asledgehammer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asledgehammer/ZomboidTypeScriptModTemplate/issues"
+  },
+  "homepage": "https://github.com/asledgehammer/ZomboidTypeScriptModTemplate.git#readme",
+  "devDependencies": {
+    "ansi": "^0.3.1",
+    "chokidar": "^3.5.3",
+    "lua-types": "^2.11.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2",
+    "typescript-to-lua": "^1.4.2"
+  },
+  "typings": "typings/",
+  "types": "./",
+  "typesVersions": {
+    ">=4.6": {
+      "*": [
+        "ts4.6/*"
+      ]
+    }
+  }
+}
